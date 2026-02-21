@@ -8,6 +8,6 @@ def getBondPrice(y, face, couponRate, m, ppy=1):
    for t in range(1, n + 1):
       bondPrice = bondPrice + coupon / (1 + r) ** t
 
-    bondPrice = bondPrice + face / (1 + r) ** n
+   bondPrice = bondPrice + face / (1 + r) ** n
 
-    return bondPrice
+   return bondPrice
