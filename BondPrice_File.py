@@ -3,6 +3,9 @@ def getBondPrice(y, face, couponRate, m, ppy=1):
    n=int(m*ppy)
    r=y/ppy
 
+   if ppy == 0:
+        return face / (1 + y) ** m
+
    bondPrice = 0
 
    for t in range(1, n + 1):
