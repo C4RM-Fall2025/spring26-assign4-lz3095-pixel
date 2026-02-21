@@ -9,4 +9,4 @@ def getBondPrice(y, face, couponRate, m, ppy=1):
     pvcoupon = c * (1 - (1 + r) ** (-n)) / r
     pvface = face * (1 + r) ** (-n)
 
-    return pvcoupon + pvface
+    return (pvcoupon + pvface)
