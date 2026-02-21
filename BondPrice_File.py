@@ -4,9 +4,13 @@ def getBondPrice(y, face, couponRate, m, ppy=1):
 
     n = int(m * ppy)
     r = y / ppy
-    c = face * couponRate / ppy
+    coupon = face * couponRate / ppy
 
-    pvcoupon = c * (1 - (1 + r) ** (-n)) / r
-    pvface = face * (1 + r) ** (-n)
+    bondPrice = 0
 
-    return (pvcoupon + pvface)
+    for t in range(1, n + 1):
+        bondPrice = bondPrice + coupon / ((1 + r) ** t)
+
+    bondPrice = bondPrice + face / ((1 + r) ** n)
+
+    return bondPrice
