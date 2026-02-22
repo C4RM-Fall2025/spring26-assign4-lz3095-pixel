@@ -11,11 +11,12 @@ def getBondDuration(y, face, couponRate, m, ppy = 1):
         if t==n:
             cf = coupon + face
 
-        pvcf = cf / ((1 + r) ** t)
+    pvcf = cf / ((1 + r) ** t)
 
-        bondPrice = bondPrice + pvcf
-        numerator = numerator + t * pvcf
+    bondPrice = bondPrice + pvcf
+    numerator = numerator + t * pvcf
 
     bondDuration = numerator / bondPrice
-    return(bondDuration)
+    return bondDuration
+
 
