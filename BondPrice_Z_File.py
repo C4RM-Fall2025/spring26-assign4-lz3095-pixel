@@ -6,7 +6,7 @@ def getBondPrice_Z(face, couponRate, times, yc):
 
     for t, y in zip(times, yc):
         cf = coupon
-        if t == m:
+        if t == times[m - 1]:
             cf = cf + face
 
         pvm = 1 / ((1 + y) ** t)
